@@ -1,0 +1,10 @@
+kind: pod
+apiVersion: v1
+metadata: 
+  name: podtesting
+spec: 
+  containers:
+   - name: testpod
+     image: ubuntu
+     command: ["/bin/bash", "-c", "while true; do echo HELLO-Avinash; sleep 4; done"]
+     
