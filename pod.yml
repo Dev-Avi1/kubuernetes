@@ -7,4 +7,17 @@ spec:
    - name: testpod
      image: ubuntu
      command: ["/bin/bash", "-c", "while true; do echo HELLO-Avinash; sleep 4; done"]
-     
+  restartPolicy: always
+--- 
+
+kind: pod 
+apiVersion: v1
+metadata: 
+  name: podtesting1
+spec: 
+  conrainers: 
+    - name: testpod1
+      image: centos
+      command: ["/bin/bash","-c", "while true; do echo HELLO-Avinash; sleep 4; done"]
+  restartPolicy: always
+  
